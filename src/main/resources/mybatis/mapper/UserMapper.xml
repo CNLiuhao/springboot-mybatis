@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuhao.springbootmybatis.mapper.UserMapper">
+   <select id="selectone" resultType="com.liuhao.springbootmybatis.bean.User">
+       SELECT * FROM user WHERE id=#{id}
+   </select>
+    <insert id="insertuser">
+        INSERT INTO user(name,gender) VALUES (#{name},#{gender})
+    </insert>
+</mapper>
